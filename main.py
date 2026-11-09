@@ -1,13 +1,11 @@
-from liste import (
-    suma_elementelor,
-    suma_elementelor_py,
+from cifre import(
+   
+cel_mai_frecvent,
+cel_mai_frecvent_py
 )
 
-
-def main() -> None:
-    v = [int(x) for x in input().split()]
-    print(suma_elementelor(v), suma_elementelor_py(v))
-
-
 if __name__ == "__main__":
-    main()
+ v = [int(x) for x in input().split()]
+print(cel_mai_frecvent(v))
+print(cel_mai_frecvent_py(v))
+   
