@@ -1,11 +1,19 @@
-from cifre import(
-   
-cel_mai_frecvent,
-cel_mai_frecvent_py
+from algoritmi import(
+
+ poz_minim,
+ poz_maxim,
+ maxim_dupa_cheie,
+ len_cifre
+ 
 )
 
+from minim_maxim import(
+    solutii
+
+
+
+
+)
 if __name__ == "__main__":
- v = [int(x) for x in input().split()]
-print(cel_mai_frecvent(v))
-print(cel_mai_frecvent_py(v))
-   
+
+    solutii()

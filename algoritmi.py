@@ -3,15 +3,15 @@ from collections import Counter
 from heapq import merge
 from itertools import accumulate, groupby
 
-
+#  min(v) returneaza minimul din v apoi cu v.index returnma pozitia lui
 def poz_minim(v: list) -> int:
     return v.index(min(v))
 
-
+# max(v) returneaza maximul din v apoi cu v.index returneaza pozitia lui
 def poz_maxim(v: list) -> int:
     return v.index(max(v))
 
-
+#key=cheie compara elementele dupa nr de caractere, max(v, key=cheie) returneaza elementul cu numarul maxim de caractere
 def maxim_dupa_cheie(v: list, cheie) -> int:
     return max(v, key=cheie)
 
