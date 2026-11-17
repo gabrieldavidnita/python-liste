@@ -15,48 +15,50 @@ def poz_maxim(v: list) -> int:
 def maxim_dupa_cheie(v: list, cheie) -> int:
     return max(v, key=cheie)
 
-
+## poz=bisect_left spune unde putem insera in stanga listei fara a strica ordinea, 
 def cautare_binara(v: list, x: int) -> int:
     poz = bisect_left(v, x)
+    # intoarce pozitia cea mai din stanga ,unde ar trebui inserat x dar  fara sa strice ordinea
+    # daca x exista deja in lista  , poz va fi prima pozitie unde se afla
     if poz < len(v) and v[poz] == x:
         return poz
-    return -1
+  
 
 
 def loc_de_inserare(v: list, x: int) -> int:
     return bisect_left(v, x)
 
-
+## sorted(v) sorteaza crescator lista
 def sortare_crescator(v: list) -> list:
     return sorted(v)
 
-
+## sorted(v, reverse=True) sorteaza descrescator lista
 def sortare_descrescator(v: list) -> list:
     return sorted(v, reverse=True)
 
-
+## sorted(v, key=cheie) sorteaza lista dupa numarul de caractere
 def sortare_dupa_cheie(v: list, cheie) -> list:
     return sorted(v, key=cheie)
 
-
+##rez=v[:] - face o copie a listei, rez[start:sfarsit + 1] = sorted(rez[start:sfarsit + 1]) - sorteaza pe interval , return rez- returneaza copia
 def sortare_interval(v: list, start: int, sfarsit: int) -> list:
     rez = v[:]
     rez[start:sfarsit + 1] = sorted(rez[start:sfarsit + 1])
     return rez
 
-
+##rez=v[:]-copie a listei, ez[start:sfarsit + 1] = sorted(rez[start:sfarsit + 1], reverse=True) - sorteaza crescator copia, return rez-returneaza copia
 def sortare_interval_descrescator(v: list, start: int, sfarsit: int) -> list:
     rez = v[:]
     rez[start:sfarsit + 1] = sorted(rez[start:sfarsit + 1], reverse=True)
     return rez
 
-
+#rez = sorted(v[:varf + 1]) + v[varf + 1:]- sorteaza intai pana la munte , dupa sorteaza pana la sfarsit , rez[varf:] = sorted(rez[varf:], reverse=True)-sorteaza descrescator in partea dreapta
 def sortare_munte(v: list, varf: int) -> list:
     rez = sorted(v[:varf + 1]) + v[varf + 1:]
     rez[varf:] = sorted(rez[varf:], reverse=True)
     return rez
 
-
+#rez = sorted(v[:varf + 1], reverse=True) + v[varf + 1:] - face o copie si sorteaza descrescator pana la varf,  rez[varf:] = sorted(rez[varf:]), sorteaza partea din dreapta crescator
 def sortare_vale(v: list, varf: int) -> list:
     rez = sorted(v[:varf + 1], reverse=True) + v[varf + 1:]
     rez[varf:] = sorted(rez[varf:])

@@ -8,12 +8,18 @@ from algoritmi import(
 )
 
 from minim_maxim import(
-    solutii
+    solutii_minim_maxim
+)
 
+from cautare_binara import(
+solutii_cautare_binara
+)
 
+from sortare import (
 
+solutii_sortare
 
 )
 if __name__ == "__main__":
 
-    solutii()
+    solutii_sortare()

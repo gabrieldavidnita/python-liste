@@ -9,7 +9,7 @@ def distanta_min_maxim(v:list) -> int:
     return abs(poz_min-poz_max)
 
 
-def solutii():
+def solutii_minim_maxim():
     print("Amplitudinea")
     print(">>>>>>>>amplitudine([7, 2, 9, 4, 5])")
     print(amplitudine([7, 2, 9, 4, 5]))
